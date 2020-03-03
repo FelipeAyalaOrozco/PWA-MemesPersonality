@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Progressive web app</title>
+  <meta name="description" content="Hello World">
+
+  <meta name="theme-color" content="#F0DB4F">
+  <meta name="MobileOptimized" content="width">
+  <meta name="HandheldFriendly" content="true">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <link rel="shortcut icon" type="image/png" href="./img/16.png">
+  <link rel="manifest" href="./manifest.json">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<body class=bg-dark> 
+  <div class="text-center text-white bg-dark ">
+    <h1 class="mt-5 titulo">Which Meme defines your personality today?</h1></div>
+  <div class=" text-center text-white bg-dark m-5" id='element'> 
+  </div>
+<footer class="page-footer font-small foot">
+  <div class="footer-copyright text-center py-3">© 2020 Powered by:
+    <a href="https://api.imgflip.com/"> Imgflip API</a>
+  </div>
+</footer>
+ 
+
+  
+  <script src="./script.js"></script>
+  <script>
+    if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('./sw.js')
+    .then(reg => console.log('Registro de SW exitoso', reg))
+    .catch(err => console.warn('Error al tratar de registrar el sw', err))
+}
+  </script>
+  
+</body>
+
+</html>
